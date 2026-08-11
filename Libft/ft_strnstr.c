@@ -1,5 +1,4 @@
-//#include <stdio.h>
-//#include <string.h>
+#include "libft.h"
 
 char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -24,20 +23,3 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 
   return (NULL);
 }
-
-/*int main(void)
-{
-  char hay[] = "Foo Bar Baz";
-  char ned[] = "Bar";
-
-  char *res = ft_strnstr(hay, ned, 10);
-  char *res_built_in = strnstr(hay, ned, 10);
-
-  printf("string: %s\n", res);
-  printf("char: %c\n", *res);
-  printf("adress: %p\n", (void *)res);
-  printf("string: %s\n", res_built_in);
-  printf("char: %c\n", *res_built_in);
-  printf("adress: %p\n", (void *)res_built_in);
-  
-}*/

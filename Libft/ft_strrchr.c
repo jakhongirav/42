@@ -1,5 +1,4 @@
-//#include <stdio.h>
-//#include <string.h>
+#include "libft.h"
 
 char *ft_strrchr(const char *s, int c)
 {
@@ -17,19 +16,3 @@ char *ft_strrchr(const char *s, int c)
   
   return (NULL);
 }
-
-/*int main(void)
-{
-  int num = 97;
-  char test[] = "Heallooa";
-  
-  char *result = ft_strrchr(test, num);
-  char *result_built_in = strrchr(test, num);
-  
-  printf("string: %s\n", result);
-  printf("char: %c\n", *result);
-  printf("adress: %p\n", (void *)result);
-  printf("string: %s\n", result_built_in);
-  printf("char: %c\n", *result_built_in);
-  printf("adress: %p\n", (void *)result_built_in);
-}*/

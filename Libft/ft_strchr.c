@@ -1,5 +1,5 @@
-//#include <stdio.h>
-//#include <string.h>
+#include "libft.h"
+
 char *ft_strchr(const char *s, int c)
 {
   size_t i = 0;
@@ -13,17 +13,3 @@ char *ft_strchr(const char *s, int c)
   
   return (NULL);
 }
-
-/*int main(void)
-{
-  int test = 97;
-  char str[] = "Hellooa";
-
-  char *result = ft_strchr(str, test);
-  char *result_built_in = strchr(str, test);
-
-  printf("character: %c\n", *result);
-  printf("string: %s\n", result);
-  printf("address: %p\n", (void *)result);
-  printf("built in function: %c\n", *result_built_in);
-}*/

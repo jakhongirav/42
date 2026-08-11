@@ -1,5 +1,4 @@
-//#include <stdio.h>
-//#include <string.h>
+#include "libft.h"
 
 int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -17,12 +16,3 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
 
   return (0);
 }
-
-/*int main(void)
-{
-  char test[] = "abcd";
-  char test1[] = "abcx";
- 
-  printf("my beloved function: %i\n", ft_strncmp(test, test1, 4));
-  printf("built in function: %i\n", strncmp(test, test1, 4));
-}*/
