@@ -1,7 +1,3 @@
-//#include <stdio.h>
-//#include <string.h>
-//#include <stdlib.h>
-
 int ft_atoi(const char *str)
 {
   int i = 0;
@@ -26,11 +22,3 @@ int ft_atoi(const char *str)
 
   return (res * mc);
 }
-
-/*int main(void)
-{
-  char test[] = "   --22";
-
-  printf("built in function: %i\n", atoi(test)); // res = 0
-  printf("beloved function: %i\n", ft_atoi(test)); // res = -22
-}*/
