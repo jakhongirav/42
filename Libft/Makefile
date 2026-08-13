@@ -23,7 +23,7 @@ SRC = ft_atoi.c \
       ft_strnstr.c \
       ft_strncmp.c \
       ft_strlen.c \
-      ft_strdup.c
+      ft_strdup.c 
 
 OBJ = $(SRC:.c=.o)
 
