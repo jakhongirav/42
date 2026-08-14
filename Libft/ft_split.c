@@ -1,5 +1,15 @@
 #include "libft.h"
 
+static void	free_split(char **res, size_t i)
+{
+	while (i > 0)
+	{
+		i--;
+		free(res[i]);
+	}
+	free(res);
+}
+
 char  **ft_split(char const *s, char c)
 {
   size_t  i;
@@ -12,6 +22,9 @@ char  **ft_split(char const *s, char c)
 
   wcount = 0;
   start = 0;
+
+  if (!s)
+    return (NULL);
 
   while (s[start])
   {
@@ -28,7 +41,7 @@ char  **ft_split(char const *s, char c)
     start = end;
   }
 
-  res = malloc((wcount + 1) * sizeof(char *));
+  res = malloc((wcount + 1) * sizeof(*res));
   if (!res)
     return (NULL);
 
@@ -39,26 +52,18 @@ char  **ft_split(char const *s, char c)
     while (s[start] == c)
       start++;
    
-    printf("start at index: %zu\n", start);
-
     end = start;
     while (s[end] && s[end] != c)
       end++;
-
-    printf("end at index: %zu\n", end);
     
     if (end - start > 0)
     {
       word = malloc(end - start + 1);
       if (!word)
       {
-        return (NULL);
-        while (i >= 0)
-        {
-          free(res[i]);
-          i--;
-        }
+        free_split(res, i);   
         free(res);
+        return (NULL);
       }
 
       j = 0;
@@ -70,17 +75,7 @@ char  **ft_split(char const *s, char c)
       res[i] = word;
       i++;
     }
-    printf("word: %s\n", word);
   }
   res[i] = NULL;
   return (res);
-}
-
-int main(void)
-{
-  char  *arr = "   Hello World  ";
-  char  sign = ' ';
-
-  ft_split(arr, sign);
-  return (0);
 }
