@@ -72,8 +72,7 @@ char  **ft_split(char const *s, char c)
 
       word[j] = '\0';
      
-      res[i] = word;
-      i++;
+      res[i++] = word;
     }
   }
   res[i] = NULL;
