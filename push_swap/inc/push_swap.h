@@ -32,5 +32,6 @@ typedef struct s_data
 
 // List operations
 t_stack	*add_node(t_stack	*ptr, int	value);
+void	swap(t_stack	*ptr);
 
 #endif

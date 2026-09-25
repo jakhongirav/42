@@ -6,7 +6,7 @@
 /*   By: jahongirabdujalilov <jabdujal@student.42r  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/27 15:10:15 by jahongirabduj     #+#    #+#             */
-/*   Updated: 2026/08/28 17:48:53 by jahongirabduj    ###   ########.fr       */
+/*   Updated: 2026/08/28 18:06:02 by jahongirabduj    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -26,6 +26,12 @@ int	main(void)
 	if (!tmp)
 		return (1);
 	data->a = tmp;
+	tmp = add_node(data->a, 60);
+	if (!tmp)
+		return (1);
+	data->a = tmp;
 	printf("%d\n", data->a->head->data);
+	printf("%d\n", data->a->head->next->data);
+	swap(data->a);
 	return (0);
 }

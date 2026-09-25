@@ -11,15 +11,17 @@
 /* ************************************************************************** */
 #include "push_swap.h"
 
-/*void	swap(t_stack_node **ptr)
+void	swap(t_stack *ptr)
 {
-	t_stack_node	*tmp;
+	int	tmp;
 
-	tmp = *ptr->next;
-	*ptr = *ptr->next;
-	*ptr->prev = NULL;
-	*ptr->next = tmp;
-}*/
+	if (ptr->head && (ptr->head)->next)
+	{
+		tmp = (ptr->head->data);
+		ptr->head->data = (ptr->head)->next->data;
+		(ptr->head)->next->data = tmp;
+	}
+}
 
 t_stack	*add_node(t_stack *ptr, int value)
 {
