@@ -26,12 +26,18 @@ int	main(void)
 	if (!tmp)
 		return (1);
 	data->a = tmp;
-	tmp = add_node(data->a, 60);
+	tmp = add_node(data->a, 10);
+	if (!tmp)
+		return (1);
+	data->a = tmp;
+	tmp = add_node(data->a, 20);
 	if (!tmp)
 		return (1);
 	data->a = tmp;
 	printf("%d\n", data->a->head->data);
-	printf("%d\n", data->a->head->next->data);
-	swap(data->a);
+	printf("%d\n", data->a->tail->data);
+	rotate(data->a);
+	printf("%d\n", data->a->head->data);
+	printf("%d\n", data->a->tail->data);
 	return (0);
 }

@@ -1,38 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operations.c                                       :+:      :+:    :+:   */
+/*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jahongirabdujalilov <jabdujal@student.42r  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/27 15:11:39 by jahongirabduj     #+#    #+#             */
-/*   Updated: 2026/09/29 16:53:55 by jahongirabduj    ###   ########.fr       */
+/*   Created: 2026/09/29 16:54:04 by jahongirabduj     #+#    #+#             */
+/*   Updated: 2026/09/29 16:54:22 by jahongirabduj    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
 
-t_stack	*add_node(t_stack *ptr, int value)
+// Swap
+void	swap(t_stack *ptr)
 {
-	t_stack_node	*temp;
+	int	tmp;
 
-	temp = malloc(sizeof(t_stack_node));
-	if (!temp)
-		return (NULL);
-	temp->data = value;
-	if (!(ptr->head))
+	if (ptr->head && (ptr->head)->next)
 	{
-		temp->prev = NULL;
-		temp->next = NULL;
-		ptr->head = temp;
-		ptr->tail = temp;
+		tmp = (ptr->head->data);
+		ptr->head->data = (ptr->head)->next->data;
+		(ptr->head)->next->data = tmp;
 	}
-	else
-	{
-		temp->prev = ptr->tail;
-		temp->next = NULL;
-		ptr->tail->next = temp;
-		ptr->tail = temp;
-	}
-	ptr->size += 1;
-	return (ptr);
+}
+
+void	sa(t_data *data)
+{
+	swap(data->a);
+	ft_putendl_fd("sa", 1);
+}
+
+void	sb(t_data *data)
+{
+	swap(data->b);
+	ft_putendl_fd("sb", 1);
+}
+
+void	ss(t_data *data)
+{
+	swap(data->a);
+	swap(data->b);
+	ft_putendl_fd("ss", 1);
 }

@@ -6,7 +6,7 @@
 #    By: jahongirabdujalilov <jabdujal@student.42r  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/08/27 15:04:57 by jahongirabduj     #+#    #+#              #
-#    Updated: 2026/08/27 15:19:54 by jahongirabduj    ###   ########.fr        #
+#    Updated: 2026/09/29 16:55:00 by jahongirabduj    ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ RM          = rm -f
 LIBFT_DIR   = Libft
 LIBFT       = $(LIBFT_DIR)/libft.a
 
-SRCS        = srcs/main.c srcs/operations.c
+SRCS        = srcs/main.c srcs/operations.c srcs/swap.c srcs/rotate.c
 OBJS        = $(SRCS:.c=.o)
 
 all: $(NAME)

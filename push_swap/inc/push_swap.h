@@ -31,7 +31,13 @@ typedef struct s_data
 }	t_data;
 
 // List operations
-t_stack	*add_node(t_stack	*ptr, int	value);
-void	swap(t_stack	*ptr);
+t_stack	*add_node(t_stack	*ptr, int	value); // add node or create a node
+// Swap
+void	swap(t_stack	*ptr); // Generic swap function
+void	sa(t_data	*data); // swap a
+void	sb(t_data	*data); // swap b
+void	ss(t_data	*data); // swap a && b
 
+// Rotate
+void	rotate(t_stack	*ptr); // Generic rotate function
 #endif
