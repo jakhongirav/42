@@ -1,48 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate.c                                           :+:      :+:    :+:   */
+/*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jahongirabdujalilov <jabdujal@student.42r  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/29 16:52:26 by jahongirabduj     #+#    #+#             */
-/*   Updated: 2026/09/30 13:35:09 by jahongirabduj    ###   ########.fr       */
+/*   Created: 2026/09/30 14:20:02 by jahongirabduj     #+#    #+#             */
+/*   Updated: 2026/09/30 16:28:03 by jahongirabduj    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
 
-// Rotate
-void	rotate(t_stack *ptr)
+void	reverse_rotate(t_stack	*ptr)
 {
-	t_stack_node	*first;
+	t_stack_node	*tmp;
 
-	if (ptr && ptr->head && ptr->head->next)
+	if (ptr->head && ptr->tail->prev)
 	{
-		first = ptr->head;
-		ptr->head = first->next;
-		ptr->head->prev = NULL;
-		ptr->tail->next = first;
-		first->prev = ptr->tail;
-		first->next = NULL;
-		ptr->tail = first;
+		tmp = ptr->tail;
+		ptr->tail = tmp->prev;
+		tmp->next = ptr->head;
+		ptr->head->prev = tmp;
+		ptr->head = tmp;
+		tmp->prev = NULL;
+		ptr->tail->next = NULL;
 	}
 }
 
-void	ra(t_data *data)
+void	rra(t_data *data)
 {
 	rotate(data->a);
-	ft_putendl_fd("ra", 1);
+	ft_putendl_fd("rra", 1);
 }
 
-void	rb(t_data *data)
+void	rrb(t_data *data)
 {
 	rotate(data->b);
-	ft_putendl_fd("rb", 1);
+	ft_putendl_fd("rrb", 1);
 }
 
-void	rr(t_data *data)
+void	rrr(t_data *data)
 {
 	rotate(data->a);
 	rotate(data->b);
-	ft_putendl_fd("rr", 1);
+	ft_putendl_fd("rrr", 1);
 }
