@@ -40,4 +40,14 @@ void	ss(t_data	*data); // swap a && b
 
 // Rotate
 void	rotate(t_stack	*ptr); // Generic rotate function
+void	ra(t_data	*data); // rotate a
+void	rb(t_data	*data); // rotate b
+void	rr(t_data	*data); // rotate a && b
+
+// Reverse rotate
+void	reverse_rotate(t_stack	*ptr);
+void	rra(t_data	*data); // reverse rotate a
+void	rrb(t_data	*data); // reverse rotate b
+void	rrr(t_data	*data); // reverse rotate a && b
+
 #endif
