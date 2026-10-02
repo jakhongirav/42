@@ -6,7 +6,7 @@
 /*   By: jahongirabdujalilov <jabdujal@student.42r  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 14:20:02 by jahongirabduj     #+#    #+#             */
-/*   Updated: 2026/10/02 16:45:17 by jahongirabduj    ###   ########.fr       */
+/*   Updated: 2026/10/02 16:53:34 by jahongirabduj    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
