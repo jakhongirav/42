@@ -6,13 +6,13 @@
 /*   By: jahongirabdujalilov <jabdujal@student.42r  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 16:54:04 by jahongirabduj     #+#    #+#             */
-/*   Updated: 2026/09/29 16:54:22 by jahongirabduj    ###   ########.fr       */
+/*   Updated: 2026/10/02 16:27:29 by jahongirabduj    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
 
 // Swap
-void	swap(t_stack *ptr)
+static	void	swap(t_stack *ptr)
 {
 	int	tmp;
 

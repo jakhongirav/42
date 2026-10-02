@@ -6,13 +6,12 @@
 /*   By: jahongirabdujalilov <jabdujal@student.42r  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 16:52:26 by jahongirabduj     #+#    #+#             */
-/*   Updated: 2026/09/30 13:35:09 by jahongirabduj    ###   ########.fr       */
+/*   Updated: 2026/10/02 16:41:37 by jahongirabduj    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
 
-// Rotate
-void	rotate(t_stack *ptr)
+static	void	rotate(t_stack *ptr)
 {
 	t_stack_node	*first;
 

@@ -33,21 +33,22 @@ typedef struct s_data
 // List operations
 t_stack	*add_node(t_stack	*ptr, int	value); // add node or create a node
 // Swap
-void	swap(t_stack	*ptr); // Generic swap function
 void	sa(t_data	*data); // swap a
 void	sb(t_data	*data); // swap b
 void	ss(t_data	*data); // swap a && b
 
 // Rotate
-void	rotate(t_stack	*ptr); // Generic rotate function
 void	ra(t_data	*data); // rotate a
 void	rb(t_data	*data); // rotate b
 void	rr(t_data	*data); // rotate a && b
 
 // Reverse rotate
-void	reverse_rotate(t_stack	*ptr);
 void	rra(t_data	*data); // reverse rotate a
 void	rrb(t_data	*data); // reverse rotate b
 void	rrr(t_data	*data); // reverse rotate a && b
+
+// Push
+void	pa(t_data	*data); // push a node to a
+void	pb(t_data	*data); // push a node to b 
 
 #endif

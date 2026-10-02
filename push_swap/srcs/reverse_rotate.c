@@ -6,12 +6,12 @@
 /*   By: jahongirabdujalilov <jabdujal@student.42r  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/30 14:20:02 by jahongirabduj     #+#    #+#             */
-/*   Updated: 2026/09/30 16:28:03 by jahongirabduj    ###   ########.fr       */
+/*   Updated: 2026/10/02 16:45:17 by jahongirabduj    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
 
-void	reverse_rotate(t_stack	*ptr)
+static	void	reverse_rotate(t_stack	*ptr)
 {
 	t_stack_node	*tmp;
 
@@ -29,19 +29,19 @@ void	reverse_rotate(t_stack	*ptr)
 
 void	rra(t_data *data)
 {
-	rotate(data->a);
+	reverse_rotate(data->a);
 	ft_putendl_fd("rra", 1);
 }
 
 void	rrb(t_data *data)
 {
-	rotate(data->b);
+	reverse_rotate(data->b);
 	ft_putendl_fd("rrb", 1);
 }
 
 void	rrr(t_data *data)
 {
-	rotate(data->a);
-	rotate(data->b);
+	reverse_rotate(data->a);
+	reverse_rotate(data->b);
 	ft_putendl_fd("rrr", 1);
 }

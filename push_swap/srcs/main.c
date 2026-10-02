@@ -6,7 +6,7 @@
 /*   By: jahongirabdujalilov <jabdujal@student.42r  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/27 15:10:15 by jahongirabduj     #+#    #+#             */
-/*   Updated: 2026/09/30 13:36:09 by jahongirabduj    ###   ########.fr       */
+/*   Updated: 2026/10/01 16:40:45 by jahongirabduj    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "push_swap.h"
@@ -34,10 +34,10 @@ int	main(void)
 	if (!tmp)
 		return (1);
 	data->a = tmp;
-	printf("%d\n", data->a->head->data);
-	printf("%d\n", data->a->tail->data);
-	rotate(data->a);
-	printf("%d\n", data->a->head->data);
-	printf("%d\n", data->a->tail->data);
+	//printf("%d\n", data->a->head->data);
+	//printf("%d\n", data->a->tail->data);
+	//rotate(data->a);
+	//printf("%d\n", data->a->head->data);
+	//printf("%d\n", data->a->tail->data);
 	return (0);
 }
