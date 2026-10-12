@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_str.c                                        :+:      :+:    :+:   */
+/*   print_char.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jabdujal <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jahongirabdujalilov <jabdujal@student.42r  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/11 15:23:00 by jabdujal          #+#    #+#             */
-/*   Updated: 2026/10/11 18:06:57 by jabdujal         ###   ########.fr       */
+/*   Created: 2026/10/12 13:34:49 by jahongirabduj     #+#    #+#             */
+/*   Updated: 2026/10/12 14:16:46 by jahongirabduj    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	print_str(const char *val)
+int	print_char(char val)
 {
-	int	i;
+	return (write(1, &val, 1));
+}
 
+int	print_str(char *val)
+{
 	if (!val)
-		val = "(null)";
-	i = 0;
-	while (val[i])
-	{
-		write(1, &val[i], 1);
-		i++;
-	}
-
-	return (i);
+		return (write(1, "(null)", 6));
+	return (write(1, val, ft_strlen(val)));
 }

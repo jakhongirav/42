@@ -6,7 +6,7 @@
 /*   By: jabdujal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/17 17:00:56 by jabdujal          #+#    #+#             */
-/*   Updated: 2026/08/17 19:05:32 by jabdujal         ###   ########.fr       */
+/*   Updated: 2026/10/12 14:00:04 by jahongirabduj    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *str)
 	size_t	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (str[i])
 		i++;
 	return (i);
 }

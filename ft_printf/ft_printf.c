@@ -12,56 +12,53 @@
 
 #include "ft_printf.h"
 
-int	ft_printf(const char *type, ...)
+static int	ft_dispatch(char sign, va_list *args)
 {
-	va_list		args;
-	va_start	(args, count);
-	int		c_count;
-	int 		i;
-
-	if (!type)
-		return (-1);
-
-	i = 0;
-	while (type[i])
-	{
-		if (type[i] != '%')
-		{
-			ft_putchar_fd(type[i], 1);
-			c_count++;
-			i++;
-		}
-		else if (type[i] == '%' && type[i + 1])
-		{
-			c_count += ft_dispatch(type[i + 1], args);
-			i+=2;
-		}	
-	}
-
-	va_end(args);
-	return (c_count);
+	if (sign == 'c')
+		return (print_char(va_arg(*args, int)));
+	if (sign == '%')
+		return (print_char('%'));
+	if (sign == 's')
+		return (print_str(va_arg(*args, char *)));
+	if (sign == 'd' || spec == 'i')
+		return (print_nbr(va_arg(*args, int)));
+	if (sign == 'u')
+		return (print_base(va_arg(*args, unsigned int), DEC, 10));
+	if (sign == 'x')
+		return (print_base(va_arg(*args, unsigned int), HEX_LO, 16));
+	if (sign == 'X')
+		return (print_base(va_arg(*args, unsigned int), HEX_UP, 16));
+	if (sign == 'p')
+		return (print_ptr(va_arg(*args, void *)));
+	return (0);
 }
 
-
-int	static ft_dispatch(char type, va_list args)
+int	ft_printf(const char *format, ...)
 {
-	int	count;	
-	
-	if (type == 'c')
-	{
-		ft_putchar_fd((char)va_arg(args, int));
-		count++;
-	}
-	else if (type == '%')
-	{
-		ft_putchar_fd('%', 1);
-		count++;
-	}
-	else if (type == 's')
-		count += print_str(va_arg(args, char *);
-	else if (type == 'd' || type == 'i')
-		count += ft_putnbr(va_arg(args, int));
+	va_list	args;
+	int		count;
+	int		ret;
+	int		i;
 
-
+	if (!format)
+		return (-1);
+	va_start(args, format);
+	count = 0;
+	ret = 0;
+	i = 0;
+	while (format[i])
+	{
+		if (format[i] == '%' && format[i + 1])
+			ret = ft_dispatch(format[++i], &args);
+		else
+			ret = print_char(format[i]);
+		if (ret < 0)
+			break ;
+		count += ret;
+		i++;
+	}
+	va_end(args);
+	if (ret < 0)
+		return (-1);
 	return (count);
 }
