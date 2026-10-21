@@ -18,7 +18,9 @@
 # include <unistd.h>
 
 int		ft_printf(const char *type, ...);
-void		print_char(char val);
+void	print_char(char val);
 int		print_str(const char *val);
+
+int		print_nbr(int n);
 
 #endif

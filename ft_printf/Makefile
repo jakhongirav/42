@@ -24,7 +24,7 @@ RM          = rm -rf
 MKDIR       = mkdir -p
 
 # Sources and Objects
-SRCS        = ft_printf.c print_char.c
+SRCS        = ft_printf.c print_char.c print_nbr.c
 OBJS        = $(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
 
 all: $(NAME)
