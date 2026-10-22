@@ -6,7 +6,7 @@
 #    By: jabdujal <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/10/07 13:10:10 by jabdujal          #+#    #+#              #
-#    Updated: 2026/10/12 13:45:32 by jahongirabduj    ###   ########.fr        #
+#    Updated: 2026/10/21 14:27:26 by jahongirabduj    ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ RM          = rm -rf
 MKDIR       = mkdir -p
 
 # Sources and Objects
-SRCS        = ft_printf.c print_char.c print_nbr.c
+SRCS        = ft_printf.c print_char.c print_nbr.c print_base.c print_ptr.c
 OBJS        = $(addprefix $(OBJ_DIR)/, $(SRCS:.c=.o))
 
 all: $(NAME)

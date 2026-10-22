@@ -6,7 +6,7 @@
 /*   By: jahongirabdujalilov <jabdujal@student.42r  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 14:54:19 by jahongirabduj     #+#    #+#             */
-/*   Updated: 2026/10/19 13:38:36 by jahongirabduj    ###   ########.fr       */
+/*   Updated: 2026/10/21 14:27:57 by jahongirabduj    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	print_base(unsigned long long n, const char *b, unsigned long long l_b)
 		if (len < 0)
 			return (-1);
 	}
-	c = base[n % l_b];
+	c = b[n % l_b];
 	tmp = write(1, &c, 1);
 	if (tmp < 0)
 		return (-1);

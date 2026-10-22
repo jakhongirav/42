@@ -6,7 +6,7 @@
 /*   By: jabdujal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/04 13:00:57 by jabdujal          #+#    #+#             */
-/*   Updated: 2026/10/19 13:38:27 by jahongirabduj    ###   ########.fr       */
+/*   Updated: 2026/10/22 15:41:25 by jahongirabduj    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	ft_dispatch(char sign, va_list *args)
 		return (print_char('%'));
 	if (sign == 's')
 		return (print_str(va_arg(*args, char *)));
-	if (sign == 'd' || spec == 'i')
+	if (sign == 'd' || sign == 'i')
 		return (print_nbr(va_arg(*args, int)));
 	if (sign == 'u')
 		return (print_base(va_arg(*args, unsigned int), DEC, 10));
@@ -31,6 +31,14 @@ static int	ft_dispatch(char sign, va_list *args)
 	if (sign == 'p')
 		return (print_ptr(va_arg(*args, void *)));
 	return (0);
+}
+
+static int	handle_char(const char *format, int *i, va_list *args)
+{
+	if (format[*i] == '%' && format[*i + 1])
+		return (ft_dispatch(format[++*i], args));
+	else
+		return (print_char(format[*i]));
 }
 
 int	ft_printf(const char *format, ...)
@@ -48,10 +56,7 @@ int	ft_printf(const char *format, ...)
 	i = 0;
 	while (format[i])
 	{
-		if (format[i] == '%' && format[i + 1])
-			ret = ft_dispatch(format[++i], &args);
-		else
-			ret = print_char(format[i]);
+		ret = handle_char(format, &i, &args);
 		if (ret < 0)
 			break ;
 		count += ret;
