@@ -6,14 +6,14 @@
 #    By: jabdujal <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/10/07 13:10:10 by jabdujal          #+#    #+#              #
-#    Updated: 2026/10/21 14:27:26 by jahongirabduj    ###   ########.fr        #
+#    Updated: 2026/10/22 17:12:12 by jahongirabduj    ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME        = libftprintf.a
 
 # Directories
-LIBFT_DIR   = Libft
+LIBFT_DIR   = libft
 LIBFT       = $(LIBFT_DIR)/libft.a
 OBJ_DIR     = obj
 

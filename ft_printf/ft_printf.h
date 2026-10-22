@@ -6,7 +6,7 @@
 /*   By: jabdujal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/04 16:19:49 by jabdujal          #+#    #+#             */
-/*   Updated: 2026/10/21 18:07:25 by jahongirabduj    ###   ########.fr       */
+/*   Updated: 2026/10/22 17:23:17 by jahongirabduj    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # define HEX_LO "0123456789abcdef"
 # define HEX_UP "0123456789ABCDEF"
 
-# include "./Libft/libft.h"
+# include "./libft/libft.h"
 # include <stdarg.h>
 # include <unistd.h>
 

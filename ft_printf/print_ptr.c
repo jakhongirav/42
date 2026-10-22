@@ -6,7 +6,7 @@
 /*   By: jahongirabdujalilov <jabdujal@student.42r  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/21 13:32:42 by jahongirabduj     #+#    #+#             */
-/*   Updated: 2026/10/21 18:29:32 by jahongirabduj    ###   ########.fr       */
+/*   Updated: 2026/10/22 17:25:36 by jahongirabduj    ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
